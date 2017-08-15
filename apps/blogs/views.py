@@ -14,7 +14,16 @@ def new(request):
     return HttpResponse(response)    
 
 def create(request):
-    return redirect('/blogs')
+    if request.method == 'POST':
+        print('*_*'*18)
+        print(request.POST) 
+        print(request.POST['name'])
+        print(request.POST['desc'])
+        request.session['name'] = "test"  # more on session below
+        print('*_*'*18)
+        return redirect("/blogs")
+    else:
+        return render(request, 'blogs/index.html')
 
 def show(request, blog_id):
     response = "<http><head><title>"

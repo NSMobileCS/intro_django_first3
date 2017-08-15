@@ -20,5 +20,7 @@ urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^surveys/?', include('apps.surveys.urls')),
     url(r'^users/?', include('apps.users.urls')),
+    url(r'^demo/?', include('apps.demo.urls')),
+    url(r'^time/?', include('apps.timedisp.urls')),
     url(r'^', include('apps.blogs.urls')),
 ]

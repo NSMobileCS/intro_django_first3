@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.amadon',
+    # 'apps.amadon',
     'apps.blogs',
     'apps.demo',
     'apps.session_words',

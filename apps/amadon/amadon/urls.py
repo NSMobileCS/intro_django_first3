@@ -1,4 +1,4 @@
-"""first3 URL Configuration
+"""amadon URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -13,16 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-#   url(r'^admin/', admin.site.urls),
-    url(r'amadon/?', include('apps.amadon.urls'),
-    url(r'^surveys/?', include('apps.surveys.urls')),
-    url(r'^users/?', include('apps.users.urls')),
-    url(r'^demo/?', include('apps.demo.urls')),
-    url(r'^sessionwords/?', include('apps.session_words.urls')),
-    url(r'^time/?', include('apps.timedisp.urls')),
-    url(r'^', include('apps.blogs.urls')),
+    url(r'^admin/', admin.site.urls),
 ]
